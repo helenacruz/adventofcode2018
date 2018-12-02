@@ -1,0 +1,14 @@
+[package]
+name = "rust"
+version = "0.1.0"
+authors = ["helenacruz <helcruz8@gmail.com>"]
+
+[[bin]]
+name = "1a"
+path = "src/1a.rs"
+
+[[bin]]
+name = "1b"
+path = "src/1b.rs"
+
+[dependencies]
