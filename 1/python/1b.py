@@ -1,7 +1,6 @@
 def twice():
     frequency = 0
-    frequencies = {}
-    frequencies[0] = 1
+    frequencies = {0}
 
     while True:
         with open('input.txt') as file:
@@ -10,6 +9,6 @@ def twice():
                     frequency += int(x)
                     if frequency in frequencies:
                         return frequency
-                    frequencies[frequency] = 1
+                    frequencies.add(frequency)
 
 print("twice: " + str(twice()))
