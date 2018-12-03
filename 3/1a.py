@@ -31,10 +31,10 @@ with open('input.txt') as file:
             max_width = (width + claim_width + width)
         if (width + claim_width + width) < min_width:
             min_width = (width + claim_width + width)
-    print("max_width: " + str(max_width))
-    print("min_width: " + str(min_width))
-    print("max_height: " + str(max_height))
-    print("min_height: " + str(min_height))
+    # print("max_width: " + str(max_width))
+    # print("min_width: " + str(min_width))
+    # print("max_height: " + str(max_height))
+    # print("min_height: " + str(min_height))
 
     m = [[0 for x in range(max_width)] for y in range(max_height)] 
     # print(m)
@@ -42,7 +42,7 @@ with open('input.txt') as file:
     with open('input.txt') as file:
         c = 1
         for line in file:
-            print(line)
+            # print(line)
             line = line.split()
             line[0] = line[0].replace('#', '')
             claim_id = int(line[0])
@@ -56,8 +56,8 @@ with open('input.txt') as file:
             line[3] = line[3].split('x')
             claim_width = int(line[3][0])
             claim_height = int(line[3][1])
-            print("cw: " + str(claim_width))
-            print("ch: " + str(claim_height))
+            # print("cw: " + str(claim_width))
+            # print("ch: " + str(claim_height))
 
             for w in range(width, width + claim_width):
                 #print("w: from " + str(width) + "to " + str(width + claim_width))
