@@ -4,8 +4,6 @@ max_match = 0
 match_words = []
 
 def match(word1, word2):
-    #print(word1)
-    #print(word2)
     global max_match
     global match_words
     match = 0
@@ -22,15 +20,12 @@ with open('input.txt') as file:
         for word in line.split():
             words += [word]
 
-# print(words)
-
 for word in words:
     new_words = words.copy()
     if word in new_words:
         new_words.remove(word)
     for w in new_words:
         match(word, w)
-        #print(match(word, w))
 
 print("max_match: " + str(max_match))
 print(match_words)
