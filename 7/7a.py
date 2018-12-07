@@ -25,7 +25,7 @@ def first_nodes():
 
 result = ""
 
-# a node is available if its successors are already places
+# a node is available if its successors are already placed
 def possible_moves(node, result):
     possible = []
     for successor in graph.successors(node):
