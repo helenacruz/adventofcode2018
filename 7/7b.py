@@ -42,7 +42,7 @@ def calculate_time(node):
     return 60 + diff
 
 moves = first_nodes()
-workers = [None] * 5 # workers[i] = time instance when task will be completed
+workers = [None] * 5 # workers[i] = time instant when task will be completed
 in_progress = [None] * 5 # in_progress[i] = task  in progress 
 
 time = 0
