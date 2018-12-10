@@ -6,9 +6,6 @@ class Point:
         self.position_y = position_y
         self.velocity_x = velocity_x
         self.velocity_y = velocity_y      
-    
-    def __str__(self):
-        return f'({self.position_x}, {self.position_y}) -> ({self.velocity_x}, {self.velocity_y})'
 
     def move(self):
         self.position_x += self.velocity_x
@@ -39,7 +36,6 @@ for time in range(15000):
     max_x, min_x, max_y, min_y = limits()
     if min_x + word_size >= max_x and min_y + word_size >= max_y:
         print(f'\ntime: {time}')
-        print(f'max_x: {max_x} min_x: {min_x} max_y: {max_y} min_y: {min_y}')
         for y in range(min_y, max_y + 1, 1):
             for x in range(min_x, max_x + 1, 1):
                 if is_point(x, y):
