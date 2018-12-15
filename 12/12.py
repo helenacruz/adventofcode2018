@@ -28,10 +28,14 @@ def sum_plants():
                 sum_plants += i - zero_index
     return sum_plants
 
+stable_sum = -1
+diff = 0
 def evolve(n):
     global zero_index
     global previous_generation
-    for _ in range(n):
+    global stable_sum
+    global diff
+    for i in range(n):
         if previous_generation[:3] != '...':
             previous_generation = "..." + previous_generation
             zero_index += 3
@@ -45,9 +49,17 @@ def evolve(n):
             else:
                 next_generation = change_char(next_generation, n + 2, '.')
         previous_generation = next_generation
+        if i + 20 == 200:
+            diff = -sum_plants()
+        elif i + 20 == 201:
+            stable_sum = sum_plants()
+            diff += sum_plants()
     return sum_plants()
-    
-# part 1
-print(f'sum_plants: {evolve(20)}')
-# part 2
-# print(f'sum_plants: {evolve(50000000000)}')
+
+print(f'part 1: {evolve(20)}')
+
+evolve(185)
+generations = 50000000000
+sum_plants = stable_sum + (diff * (generations - 201))
+
+print(f'part 2: {sum_plants}')
