@@ -168,4 +168,4 @@ for statement in program:
     c = statement[3]
     registers = opcodes_function[opcode](registers, a, b, c)
 
-print(f'part2: {registers[0]}')
+print(f'part 2: {registers[0]}')
